@@ -80,7 +80,24 @@ body { background-color: #020202; margin: 0; overflow: hidden; font-family: 'Cou
 .vol-label { font-size: 0.6rem; color: #666; font-weight: bold; }
 #vol-slider { flex-grow: 1; height: 2px; appearance: none; background: #333; outline: none; }
 #vol-slider::-webkit-slider-thumb { appearance: none; width: 8px; height: 18px; background: #444; border: 1px solid #666; cursor: pointer; }
-
+#vol-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 8px;
+    height: 18px;
+    background: #00ff00; 
+    border: 1px solid #008800;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  effect */
+}
+#vol-slider::-moz-range-thumb {
+    width: 8px;
+    height: 18px;
+    background: #00ff00;
+    border: 1px solid #008800;
+    cursor: pointer;
+    border-radius: 0;
+}
 #load-btn {
     background: #1a1a1a; color: #00ff00; border: 1px solid #00ff00;
     padding: 10px; font-family: inherit; font-size: 0.8rem; font-weight: bold;
