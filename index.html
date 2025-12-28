@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js" defer></script>
+    <title> hi >:) </title>
+    <link rel="icon" type="image/x-icon" href="/logos/favicon.ico">
+</head>
+<body>
+    <div id="signal-tear"></div>
+    <div class="vhs-grain"></div>
+    <div class="scanlines"></div>
+
+    <div id="vcr-hud">
+        <div class="hud-top-left">
+            <div class="rec-status"><span class="rec-dot">●</span> REC</div>
+            <div id="now-playing-container">
+                <span id="now-playing-title">SYSTEM READY...</span>
+            </div>
+        </div>
+        <div class="hud-top-right">DVD VIDEO - DIGITAL AUDIO</div>
+        <div class="hud-bottom-left" id="hud-date">--- -- 1997 --:--</div>
+    </div>
+
+    <div id="vcr-rack">
+        <div class="rack-handle"></div>
+        <div id="vcr-display" onclick="togglePlay()">
+            <div id="vcr-thumb-bg"></div>
+            <div id="vcr-loader"></div>
+            <div class="display-content">
+                <div id="vcr-status">PLAY</div>
+                <div id="vcr-time">00:00:00</div>
+            </div>
+        </div>
+        <div class="vcr-controls">
+            <button class="rack-btn" onclick="seek(-10)">REW ◄◄</button>
+            <button class="rack-btn" onclick="seek(10)">FF ►►</button>
+        </div>
+        <div class="volume-module">
+            <span class="vol-label">VOL</span>
+            <input type="range" id="vol-slider" min="0" max="100" value="100" oninput="changeVolume(this.value)">
+        </div>
+        <button id="load-btn" onclick="toggleOverlay()">
+            <span class="eject-symbol">⏏</span> EJECT/LOAD
+        </button>
+    </div>
+
+    <div id="site-footer">
+        <span class="heart">❤</span> 
+        DVD FORKED FROM <a href="https://github.com/bemxio/dvd-screensaver" target="_blank">bemxio</a> 
+        • PAGE BY <a href="https://github.com/Blumsie/dvd-player target="_blank">daii</a>
+    </div>
+
+    <div id="tape-overlay">
+        <div class="overlay-content">
+            <h2 class="menu-title">DISC INPUT SELECT</h2>
+            <div class="input-box">
+                <span class="prompt-arrow">></span>
+                <input type="text" id="tape-input" placeholder="PASTE LINK & PRESS ENTER..." onkeydown="handleInput(event)">
+            </div>
+            <p class="hint-text">PRESS ENTER TO LOAD DISC • CLICK OUTSIDE TO EXIT</p>
+        </div>
+    </div>
+
+    <div id="yt-player"></div>
+</body>
+</html>
