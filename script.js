@@ -81,6 +81,10 @@ function handleInput(e) {
     if (e.key === 'Enter') {
         const val = e.target.value.trim();
         if (val) {
+            const loadSound = new Audio('insert.mp3'); //pls work thx
+            loadSound.volume = 0.6;
+            loadSound.play();
+
             const id = extractID(val);
             const titleDisp = document.getElementById('now-playing-title');
             
