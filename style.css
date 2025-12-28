@@ -88,7 +88,6 @@ body { background-color: #020202; margin: 0; overflow: hidden; font-family: 'Cou
     border: 1px solid #008800;
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-  effect */
 }
 #vol-slider::-moz-range-thumb {
     width: 8px;
